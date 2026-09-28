@@ -49,178 +49,51 @@
 
 <main class="home-main">
 
-  <!-- Main page heading for accessibility -->
-  <h1 class="sr-only">Toy Haven</h1>
-
   <!-- ===================================================
        HERO SECTION
        JavaScript automatically rotates the promotional
        text. The toy images make the home page visually full.
        =================================================== -->
+  <section class="hero hero-full" aria-label="Toy Haven promotions">
 
-  <!-- =====================================================
-       HERO SLIDESHOW
-       Text is on the left and the category image is on
-       the right. JavaScript changes the active slide.
-       ===================================================== -->
-  <section class="hero hero-slider" aria-label="Toy Haven promotions">
+    <div class="hero-copy">
+      <p class="eyebrow">WELCOME TO TOY HAVEN</p>
 
-    <div class="hero-slides">
+      <h1 id="hero-title">FAVOURITE TOYS FOR EVERY FAN</h1>
 
-      <!-- SLIDE 1: FIGURINES -->
-      <article class="hero-slide active">
+      <p id="hero-text">
+        Discover collectibles, building sets, games and diecast models all in one place.
+      </p>
 
-        <!-- Left side: promotional wording -->
-        <div class="hero-slide-content">
-          <span class="hero-eyebrow">COLLECTOR'S PICKS</span>
-
-          <h2>Collect Your Favourites</h2>
-
-          <p>
-            Discover detailed collectible figurines
-            made for every collection.
-          </p>
-
-          <a href="products.html?category=Figurines" class="btn">
-            Shop Figurines
-          </a>
-        </div>
-
-        <!-- Right side: category image -->
-        <div class="hero-slide-image-wrapper">
-          <img src="assets/batman.jpg"
-               alt="Batman collectible figurine"
-               class="hero-slide-image">
-        </div>
-
-      </article>
-
-
-      <!-- SLIDE 2: TOYS -->
-      <article class="hero-slide">
-
-        <div class="hero-slide-content">
-          <span class="hero-eyebrow">PLAY TIME</span>
-
-          <h2>Play. Imagine. Explore.</h2>
-
-          <p>
-            Discover exciting toys for every
-            adventure and imagination.
-          </p>
-
-          <a href="products.html?category=Toys" class="btn">
-            Shop Toys
-          </a>
-        </div>
-
-        <div class="hero-slide-image-wrapper">
-          <img src="assets/truck.jpg"
-               alt="Toy truck"
-               class="hero-slide-image">
-        </div>
-
-      </article>
-
-
-      <!-- SLIDE 3: BOARD GAMES -->
-      <article class="hero-slide">
-
-        <div class="hero-slide-content">
-          <span class="hero-eyebrow">GAME NIGHT</span>
-
-          <h2>Game Night Starts Here</h2>
-
-          <p>
-            Bring friends and family together
-            with exciting board games.
-          </p>
-
-          <a href="products.html?category=Board%20Games" class="btn">
-            Shop Board Games
-          </a>
-        </div>
-
-        <div class="hero-slide-image-wrapper">
-          <img src="assets/monopoly.jpg"
-               alt="Board game"
-               class="hero-slide-image">
-        </div>
-
-      </article>
-
-
-      <!-- SLIDE 4: DIECAST CARS -->
-      <article class="hero-slide">
-
-        <div class="hero-slide-content">
-          <span class="hero-eyebrow">FOR COLLECTORS</span>
-
-          <h2>Built For Collectors</h2>
-
-          <p>
-            Explore detailed diecast cars made
-            for enthusiasts and collectors.
-          </p>
-
-          <a href="products.html?category=Diecast%20Cars" class="btn">
-            Shop Diecast
-          </a>
-        </div>
-
-        <div class="hero-slide-image-wrapper">
-          <img src="assets/ferrari.jpg"
-               alt="Ferrari diecast model car"
-               class="hero-slide-image">
-        </div>
-
-      </article>
-
+      <!-- CTA = Call To Action -->
+      <a class="btn" href="products.html">SHOP NOW</a>
     </div>
 
+    <!-- TOY WALL: these are decorative product images -->
+    <div class="hero-toy-wall" id="hero-art" aria-hidden="true">
+      <div class="hero-product hero-p1">
+        <img src="assets/spiderman.jpg" alt="">
+      </div>
 
-    <!-- Previous slide button -->
-    <button class="hero-arrow hero-prev"
-            type="button"
-            aria-label="Previous slide">
-      &#10094;
-    </button>
+      <div class="hero-product hero-p2">
+        <img src="assets/batman.jpg" alt="">
+      </div>
 
-    <!-- Next slide button -->
-    <button class="hero-arrow hero-next"
-            type="button"
-            aria-label="Next slide">
-      &#10095;
-    </button>
+      <div class="hero-product hero-p3">
+        <img src="assets/lego city.jpg" alt="">
+      </div>
 
+      <div class="hero-product hero-p4">
+        <img src="assets/monopoly.jpg" alt="">
+      </div>
 
-    <!-- Slide indicator dots -->
-    <div class="hero-dots"
-         role="group"
-         aria-label="Choose a promotion">
-
-      <button class="hero-dot active"
-              type="button"
-              aria-label="Go to slide 1">
-      </button>
-
-      <button class="hero-dot"
-              type="button"
-              aria-label="Go to slide 2">
-      </button>
-
-      <button class="hero-dot"
-              type="button"
-              aria-label="Go to slide 3">
-      </button>
-
-      <button class="hero-dot"
-              type="button"
-              aria-label="Go to slide 4">
-      </button>
-
+      <div class="hero-product hero-p5">
+        <img src="assets/bmw.jpg" alt="">
+      </div>
     </div>
 
+    <!-- JavaScript creates the slide buttons here -->
+    <div class="hero-dots" id="hero-dots" aria-label="Promotion slides"></div>
   </section>
 
 
@@ -240,22 +113,22 @@
     <div class="category-cards">
 
       <a class="category-card" href="products.html?category=Figurines">
-        <img src="assets/batman.jpg" alt="">
+        <img src="assets/batman.jpg" alt="Figurines">
         <span>Figurines</span>
       </a>
 
       <a class="category-card" href="products.html?category=Toys">
-        <img src="assets/truck.jpg" alt="">
+        <img src="assets/truck.jpg" alt="Toys">
         <span>Toys</span>
       </a>
 
       <a class="category-card" href="products.html?category=Board%20Games">
-        <img src="assets/monopoly.jpg" alt="">
+        <img src="assets/monopoly.jpg" alt="Board Games">
         <span>Board Games</span>
       </a>
 
       <a class="category-card" href="products.html?category=Diecast%20Cars">
-        <img src="assets/ferrari.jpg" alt="">
+        <img src="assets/ferrari.jpg" alt="Diecast Cars">
         <span>Diecast Cars</span>
       </a>
 
@@ -367,10 +240,8 @@
 
 </footer>
 
-
 <!-- Small notification used by JavaScript -->
 <div id="toast" class="toast" role="status" aria-live="polite"></div>
-
 
 <!-- PRODUCT DATA MUST LOAD BEFORE app.js -->
 <script src="js/products-data.js"></script>
